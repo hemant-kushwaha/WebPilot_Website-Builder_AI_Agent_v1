@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven — Fresh Coffee, Made With Love</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-mug-hot"></i>
+                <span>Brew Haven</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#menu" class="btn-order">Order Online</a>
+                </div>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <span class="hero-badge"><i class="fa-solid fa-seedling">></i> Artisan Roastery & Cafe</span>
+            <h1>Fresh Coffee, <br><span>Made With Love</span></h1>
+            <p>Step into a world of rich aromas, ethically sourced beans, and masterfully crafted brews designed to make your day extraordinary.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn btn-primary">View Menu <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#about" class="btn btn-secondary">Our Story</a>
+            </div>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <i class="fa-solid fa-award"></i>
+                    <div>
+                        <h4>100% Organic</h4>
+                        <p>Ethically farmed beans</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-fire-burner"></i>
+                    <div>
+                        <h4>Freshly Roasted</h4>
+                        <p>Small batches weekly</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-heart"></i>
+                    <div>
+                        <h4>Made with Love</h4>
+                        <p>Expert baristas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title"><i class="fa-solid fa-mug-saucer"></i> Discover Our Tastes</span>
+                <h2>Signature Coffee Menu</h2>
+                <p>Hand-crafted beverages made with precision, passion, and the finest specialty coffee beans.</p>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Item 1 -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600&auto=format&fit=crop" alt="Caramel Macchiato">
+                        <span class="price-tag">$5.25</span>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title-wrap">
+                            <h3>Caramel Macchiato</h3>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Fresh espresso poured over vanilla-scented milk and marked with caramel drizzle.</p>
+                        <button class="btn-add" onclick="orderItem('Caramel Macchiato')"><i class="fa-solid fa-plus"></i> Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop" alt="Classic Caffe Latte">
+                        <span class="price-tag">$4.75</span>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title-wrap">
+                            <h3>Classic Caffe Latte</h3>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                        </div>
+                        <p>Rich espresso with steamed milk and a light layer of velvety microfoam on top.</p>
+                        <button class="btn-add" onclick="orderItem('Classic Caffe Latte')"><i class="fa-solid fa-plus"></i> Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=600&auto=format&fit=crop" alt="Velvet Mocha">
+                        <span class="price-tag">$5.50</span>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title-wrap">
+                            <h3>Velvet Mocha</h3>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 5.0</span>
+                        </div>
+                        <p>Espresso combined with decadent dark chocolate syrup, steamed milk, and whipped cream.</p>
+                        <button class="btn-add" onclick="orderItem('Velvet Mocha')"><i class="fa-solid fa-plus"></i> Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=600&auto=format&fit=crop" alt="Signature Espresso">
+                        <span class="price-tag">$3.50</span>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title-wrap">
+                            <h3>Signature Espresso</h3>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>A bold, concentrated shot of our signature blend with a rich, golden crema.</p>
+                        <button class="btn-add" onclick="orderItem('Signature Espresso')"><i class="fa-solid fa-plus"></i> Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?q=80&w=600&auto=format&fit=crop" alt="Cold Brew Vanilla">
+                        <span class="price-tag">$4.95</span>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title-wrap">
+                            <h3>Cold Brew Vanilla</h3>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                        </div>
+                        <p>Steeped for 20 hours for a smooth, low-acidity brew infused with natural vanilla bean.</p>
+                        <button class="btn-add" onclick="orderItem('Cold Brew Vanilla')"><i class="fa-solid fa-plus"></i> Order Now</button>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="menu-card">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=600&auto=format&fit=crop" alt="Matcha Green Tea Latte">
+                        <span class="price-tag">$5.75</span>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-title-wrap">
+                            <h3>Matcha Green Tea Latte</h3>
+                            <span class="rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                        </div>
+                        <p>Ceremonial-grade Japanese green tea matcha whisked with creamy steamed oat milk.</p>
+                        <button class="btn-add" onclick="orderItem('Matcha Green Tea Latte')"><i class="fa-solid fa-plus"></i> Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container about-container">
+            <div class="about-img-box">
+                <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=800&auto=format&fit=crop" alt="Coffee brewing in cafe">
+                <div class="experience-badge">
+                    <span class="number">10+</span>
+                    <span class="text">Years of Coffee Craft</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="sub-title"><i class="fa-solid fa-heart"></i> Our Story</span>
+                <h2>Brewing Connections, One Cup at a Time</h2>
+                <p>Founded in 2014, Brew Haven started with a simple belief: that a great cup of coffee has the power to transform your entire day. We travel directly to sustainable coffee farms across South America and Africa to handpick the highest quality beans.</p>
+                <p>Our expert roasters craft each batch with care, bringing out the unique flavor notes of every origin. Whether you're here to catch up with friends, read a book, or jumpstart your morning, our haven is your haven.</p>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>15k+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>25+</h3>
+                        <p>Coffee Origins</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Fair Trade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Experience Banner -->
+    <section class="banner-section">
+        <div class="container text-center">
+            <h2>Experience the Warmth of Brew Haven</h2>
+            <p>Visit our flagship cafe today or order online for quick pickup. Your perfect cup awaits.</p>
+            <a href="#menu" class="btn btn-primary">Explore Full Menu</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="sub-title"><i class="fa-solid fa-envelope">></i> Get In Touch</span>
+                <h2>We'd Love to Hear From You</h2>
+                <p>Have questions, feedback, or want to host an event? Drop us a message!</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Visit Our Cafe</h3>
+                    <p>Come say hello and experience our cozy atmosphere firsthand.</p>
+                    
+                    <ul class="info-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <p>742 Evergreen Terrace, Coffee District, NY 10012</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <strong>Opening Hours</strong>
+                                <p>Mon - Fri: 6:30 AM - 7:00 PM<br>Sat - Sun: 7:30 AM - 8:00 PM</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+1 (555) 839-2900</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>hello@brewhaven.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contact-form-box">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="General Inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="#home" class="logo footer-logo">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <span>Brew Haven</span>
+                </a>
+                <p>Crafting moments of joy through exceptional coffee, sustainable practices, and a welcoming community space.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Popular Drinks</h3>
+                <ul>
+                    <li><a href="#menu">Caramel Macchiato</a></li>
+                    <li><a href="#menu">Classic Caffe Latte</a></li>
+                    <li><a href="#menu">Velvet Mocha</a></li>
+                    <li><a href="#menu">Cold Brew Vanilla</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get special offers, freebies, and once-in-a-lifetime coffee deals.</p>
+                <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Brew Haven Coffee Co. All rights reserved. Designed with love.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Modal/Popup -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">Item added to cart!</span>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

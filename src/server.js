@@ -24,6 +24,15 @@ app.post("/api/chat", async (req, res) => {
     return res.status(400).send("Message is required");
   }
 
+  /*
+   * SSE headers
+   */
+  res.setHeader("Content-Type", "text/event-stream");
+  res.setHeader("Cache-Control", "no-cache");
+  res.setHeader("Connection", "keep-alive");
+
+  res.flushHeaders();
+
   try {
     const result = await runWebsiteBuilder({
       message,

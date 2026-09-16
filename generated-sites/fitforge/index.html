@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITFORGE | Forge Your Strongest Self</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header id="header" class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-dumbbell"></i>
+                <span>FIT<span class="highlight">FORGE</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#programs" class="nav-link">Programs</a></li>
+                    <li><a href="#trainers" class="nav-link">Trainers</a></li>
+                    <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#pricing" class="btn btn-primary nav-cta">Join Now</a>
+                </div>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <div class="hero-badge reveal">
+                <i class="fa-solid fa-bolt"></i> Elite Fitness & Wellness
+            </div>
+            <h1 class="hero-title reveal">Forge Your <span class="highlight-text">Strongest Self</span></h1>
+            <p class="hero-subtitle reveal">Push your limits with world-class coaching, state-of-the-art training methodologies, and a relentless community dedicated to high-performance living.</p>
+            <div class="hero-buttons reveal">
+                <a href="#pricing" class="btn btn-primary btn-lg">Start Training <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#programs" class="btn btn-outline btn-lg">Explore Programs</a>
+            </div>
+            
+            <!-- Quick Features Banner Inside Hero -->
+            <div class="hero-metrics reveal">
+                <div class="metric-item">
+                    <h3>10K+</h3>
+                    <p>Active Members</p>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <h3>50+</h3>
+                    <p>Expert Trainers</p>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <h3>15+</h3>
+                    <p>Pro Programs</p>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <h3>8+</h3>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="programs section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="sub-heading">WORLD-CLASS TRAINING</span>
+                <h2 class="section-title">Designed For <span class="highlight">Maximum Results</span></h2>
+                <p class="section-desc">Choose from our specialized programs crafted by elite coaches to transform your physique and performance.</p>
+            </div>
+
+            <div class="programs-grid">
+                <!-- Program 1 -->
+                <div class="program-card reveal">
+                    <div class="program-image" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80');">
+                        <span class="program-badge">Popular</span>
+                    </div>
+                    <div class="program-content">
+                        <h3>Strength Training</h3>
+                        <p>Master compound lifts, build raw power, and push past your physical plateaus with progressive overload frameworks.</p>
+                        <div class="program-meta">
+                            <span><i class="fa-solid fa-gauge-high"></i> Level: Intermediate</span>
+                            <span><i class="fa-regular fa-clock"></i> 12 Weeks</span>
+                        </div>
+                        <a href="#contact" class="btn btn-secondary program-btn">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="program-card reveal">
+                    <div class="program-image" style="background-image: url('https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80');">
+                        <span class="program-badge">Hypertrophy</span>
+                    </div>
+                    <div class="program-content">
+                        <h3>Muscle Building</h3>
+                        <p>Scientifically structured hypertrophy routines targeting every muscle fiber for optimal size, symmetry, and definition.</p>
+                        <div class="program-meta">
+                            <span><i class="fa-solid fa-gauge-high"></i> Level: All Levels</span>
+                            <span><i class="fa-regular fa-clock"></i> 16 Weeks</span>
+                        </div>
+                        <a href="#contact" class="btn btn-secondary program-btn">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="program-card reveal">
+                    <div class="program-image" style="background-image: url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80');">
+                        <span class="program-badge">Shred</span>
+                    </div>
+                    <div class="program-content">
+                        <h3>Fat Loss & Cut</h3>
+                        <p>High-intensity metabolic conditioning paired with fat-burning circuits to strip stubborn body fat while retaining lean mass.</p>
+                        <div class="program-meta">
+                            <span><i class="fa-solid fa-gauge-high"></i> Level: Beginner+</span>
+                            <span><i class="fa-regular fa-clock"></i> 8 Weeks</span>
+                        </div>
+                        <a href="#contact" class="btn btn-secondary program-btn">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="program-card reveal">
+                    <div class="program-image" style="background-image: url('https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=800&q=80');">
+                        <span class="program-badge">Athletic</span>
+                    </div>
+                    <div class="program-content">
+                        <h3>Functional Fitness</h3>
+                        <p>Enhance agility, core stability, endurance, and everyday movement mechanics for peak athletic performance.</p>
+                        <div class="program-meta">
+                            <span><i class="fa-solid fa-gauge-high"></i> Level: All Levels</span>
+                            <span><i class="fa-regular fa-clock"></i> 10 Weeks</span>
+                        </div>
+                        <a href="#contact" class="btn btn-secondary program-btn">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section id="trainers" class="trainers section-padding bg-darker">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="sub-heading">ELITE MENTORSHIP</span>
+                <h2 class="section-title">Meet Our <span class="highlight">Pro Trainers</span></h2>
+                <p class="section-desc">Train under the guidance of certified champions, exercise physiologists, and elite performance coaches.</p>
+            </div>
+
+            <div class="trainers-grid">
+                <!-- Trainer 1 -->
+                <div class="trainer-card reveal">
+                    <div class="trainer-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=600&q=80" alt="Marcus Vance">
+                        <div class="trainer-socials">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Marcus Vance</h3>
+                        <span class="trainer-role">Head of Strength & Conditioning</span>
+                        <p class="trainer-bio">Former Olympic weightlifting coach with 12+ years experience in transforming athletes and powerlifters.</p>
+                        <div class="trainer-exp">
+                            <span><i class="fa-solid fa-medal"></i> 12 Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trainer 2 -->
+                <div class="trainer-card reveal">
+                    <div class="trainer-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova">
+                        <div class="trainer-socials">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Elena Rostova</h3>
+                        <span class="trainer-role">Hypertrophy & Physique Specialist</span>
+                        <p class="trainer-bio">IFBB Pro and nutrition expert dedicated to sustainable body recomposition and stage readiness.</p>
+                        <div class="trainer-exp">
+                            <span><i class="fa-solid fa-medal"></i> 9 Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trainer 3 -->
+                <div class="trainer-card reveal">
+                    <div class="trainer-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Jaxson Steel">
+                        <div class="trainer-socials">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="trainer-info">
+                        <h3>Jaxson Steel</h3>
+                        <span class="trainer-role">Functional & HIIT Master Coach</span>
+                        <p class="trainer-bio">Specializes in explosive agility, fat incineration, and building bulletproof joints for high-stress sports.</p>
+                        <div class="trainer-exp">
+                            <span><i class="fa-solid fa-medal"></i> 10 Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="sub-heading">INVEST IN YOURSELF</span>
+                <h2 class="section-title">Transparent <span class="highlight">Membership Plans</span></h2>
+                <p class="section-desc">Choose the blueprint that fits your goals. No hidden fees. Cancel anytime.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p>Essential access for self-starters</p>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">39</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Full gym floor access</li>
+                        <li><i class="fa-solid fa-check"></i> 2 Standard programs included</li>
+                        <li><i class="fa-solid fa-check"></i> FITFORGE mobile app access</li>
+                        <li><i class="fa-solid fa-xmark text-muted"></i> 1-on-1 Trainer consultation</li>
+                        <li><i class="fa-solid fa-xmark text-muted"></i> Nutrition planning</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline pricing-btn">Choose Starter</a>
+                </div>
+
+                <!-- Pro Plan (Recommended) -->
+                <div class="pricing-card popular reveal">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro Forge</h3>
+                        <p>For dedicated athletes seeking serious growth</p>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">79</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> 24/7 Priority gym access</li>
+                        <li><i class="fa-solid fa-check"></i> All 15+ Pro programs unlocked</li>
+                        <li><i class="fa-solid fa-check"></i> Monthly 1-on-1 coach check-in</li>
+                        <li><i class="fa-solid fa-check"></i> Custom macro & nutrition guide</li>
+                        <li><i class="fa-solid fa-check"></i> Sauna & recovery zone access</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary pricing-btn">Choose Pro Forge</a>
+                </div>
+
+                <!-- Elite Plan -->
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3>Elite VIP</h3>
+                        <p>Ultimate elite coaching & concierge perks</p>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">149</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fa-solid fa-check"></i> Unlimited VIP club access</li>
+                        <li><i class="fa-solid fa-check"></i> Weekly 1-on-1 personal training</li>
+                        <li><i class="fa-solid fa-check"></i> Fully customized meal & supp plan</li>
+                        <li><i class="fa-solid fa-check"></i> Bi-metric body composition scans</li>
+                        <li><i class="fa-solid fa-check"></i> Guest passes (2 per month)</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline pricing-btn">Choose Elite</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section-padding bg-darker">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="sub-heading">SUCCESS STORIES</span>
+                <h2 class="section-title">Real Results From <span class="highlight">Real Members</span></h2>
+                <p class="section-desc">Hear how FITFORGE has completely redefined lifestyles, strength levels, and confidence.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card reveal">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Joining FITFORGE was the best decision of my life. In 6 months under the Muscle Building program and Coach Elena, I added 12lbs of lean muscle and transformed my entire posture."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Sarah Jenkins">
+                        <div>
+                            <h4>Sarah Jenkins</h4>
+                            <span>Pro Member, 6 Months</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card reveal">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The community and trainers here are unmatched. Marcus helped me break my deadlift plateau after 2 years. The atmosphere pushes you to demand more from yourself every single day."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="David Miller">
+                        <div>
+                            <h4>David Miller</h4>
+                            <span>Elite VIP Member, 2 Years</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card reveal">
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"As a busy professional, the streamlined app workouts and fat loss programming gave me exact structure. I lost 22lbs of fat and regained my energy. FITFORGE is phenomenal."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Jessica Taylor">
+                        <div>
+                            <h4>Jessica Taylor</h4>
+                            <span>Pro Member, 1 Year</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info reveal">
+                    <span class="sub-heading">GET IN TOUCH</span>
+                    <h2 class="section-title">Ready To Forge Your <span class="highlight">Legacy?</span></h2>
+                    <p class="section-desc">Have questions about our programs, personal training, or club facilities? Reach out to our team and we'll get back to you within 24 hours.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h4>Headquarters</h4>
+                                <p>742 Evergreen Terrace, Fitness District, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+1 (800) 555-FORGE</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h4 >Email Support</h4>
+                                <p>support@fitforge.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container reveal">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <h3>Send Us A Message</h3>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe">
+                            <small class="error-message" id="nameError">Please enter your name.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com">
+                            <small class="error-message" id="emailError">Please enter a valid email address.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                            <small class="error-message" id="phoneError">Please enter a valid phone number.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your fitness goals..."></textarea>
+                            <small class="error-message" id="messageError">Please enter your message.</small>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                        
+                        <div id="formSuccess" class="form-success">
+                            <i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully. We will be in touch soon.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo footer-logo">
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <span>FIT<span class="highlight">FORGE</span></span>
+                    </a>
+                    <p class="footer-desc">FITFORGE is the premier destination for high-performance training, elite coaching, and unbreakable community spirit. Forge your strongest self.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#trainers">Trainers</a></li>
+                        <li><a href="#pricing">Pricing Plans</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Top Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="#programs">Strength Training</a></li>
+                        <li><a href="#programs">Muscle Building</a></li>
+                        <li><a href="#programs">Fat Loss & Cut</a></li>
+                        <li><a href="#programs">Functional Fitness</a></li>
+                        <li><a href="#programs">Advanced Mobility</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Opening Hours</h4>
+                    <ul class="footer-hours">
+                        <li><span>Monday - Friday:</span> 5:00 AM - 11:00 PM</li>
+                        <li><span>Saturday:</span> 6:00 AM - 10:00 PM</li>
+                        <li><span>Sunday:</span> 7:00 AM - 9:00 PM</li>
+                        <li class="vip-notice"><span>VIP Members:</span> 24/7 Access</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 FITFORGE Fitness & Wellness Inc. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

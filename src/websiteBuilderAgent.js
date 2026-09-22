@@ -15,12 +15,9 @@ export async function runWebsiteBuilder({
   previousInteractionId = null,
 }) {
   let input = message;
-
   let interactionId = previousInteractionId;
 
   while (true) {
-    console.log("Calling Gemini...");
-
     const interaction = await ai.interactions.create({
       model,
 
@@ -34,34 +31,13 @@ export async function runWebsiteBuilder({
     });
 
     interactionId = interaction.id;
-
-    console.log("Interaction ID:", interactionId);
-
-    /*
-     * Current Gemini Interactions API
-     * uses `steps`, not `outputs`.
-     */
-    const steps = interaction.steps || [];
-
-    console.log(
-      "Steps:",
-      steps.map((step) => step.type),
-    );
-
     const functionResults = [];
 
-    /*
-     * Gemini can return one or more
-     * function_call steps.
-     */
-    for (const step of steps) {
-      if (step.type !== "function_call") {
-        continue;
-      }
+    // Gemini can return one or more function_call steps.
+    for (const step of interaction.steps || []) {
+      // Use IF to Execute Your Step Type
 
-      console.log("Tool requested:", step.name);
-
-      console.log("Arguments:", step.arguments);
+      if (step.type !== "function_call") continue;
 
       let result;
 
@@ -75,42 +51,24 @@ export async function runWebsiteBuilder({
         };
       }
 
-      console.log("Tool result:", result);
-
+      // Function_result
       functionResults.push({
         type: "function_result",
-
         name: step.name,
-
         call_id: step.id,
-
         result: [
           {
             type: "text",
-
             text: typeof result === "string" ? result : JSON.stringify(result),
           },
         ],
       });
     }
 
-    /*
-     * No function calls means Gemini
-     * has finished the task.
-     */
-    if (functionResults.length === 0) {
-      console.log("No more tools required.");
+    //No function calls means Gemini has finished the task.
+    if (functionResults.length === 0) return interaction.output_text || "";
 
-      return {
-        text: interaction.output_text || "",
-
-        interactionId,
-      };
-    }
-
-    /*
-     * Send all tool results back to Gemini.
-     */
+    //Send all tool results back to Gemini.
     input = functionResults;
   }
 }

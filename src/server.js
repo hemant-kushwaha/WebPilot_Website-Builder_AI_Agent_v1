@@ -1,8 +1,4 @@
 import "dotenv/config";
-// dotenv.config({
-//   path: ".env",
-// });
-console.log("MODEL:", process.env.MODEL);
 import cors from "cors";
 import express from "express";
 
@@ -31,21 +27,23 @@ app.post("/api/chat", async (req, res) => {
   res.setHeader("Cache-Control", "no-cache");
   res.setHeader("Connection", "keep-alive");
 
-  res.flushHeaders();
+  res.flushHeaders(); // to send headers immediately
 
   try {
     const result = await runWebsiteBuilder({
       message,
       previousInteractionId,
+      res,
     });
 
     previousInteractionId = result.interactionId;
-
-    res.status(200).send(result.text);
+    res.end();
   } catch (error) {
     console.error("Website Builder Error:", error);
 
-    res.status(500).send("Something went wrong");
+    res.write(`data: Something went wrong\n\n`);
+    res.end();
+    // res.status(500).send("Something went wrong");
   }
 });
 

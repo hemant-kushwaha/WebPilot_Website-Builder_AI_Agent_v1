@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Haven | Artisan Kitchen & Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Notification Banner -->
+    <div id="promo-banner" class="promo-banner">
+        <p><i class="fa-solid fa-fire"></i> Order online and get <strong>20% OFF</strong> your first feast! Use code: <strong>HAVEN20</strong></p>
+        <button id="close-banner" aria-label="Close banner"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-utensils"></i>
+                <span>Gourmet Haven</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#specials">Chef's Specials</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cart-btn" aria-label="Open Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <a href="#reservation" class="btn btn-primary nav-reserve-btn">Book Table</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="badge"><i class="fa-solid fa-star"></i> Rated #1 Artisan Dining in City</span>
+            <h1>Savor the Art of <span class="highlight">Fine Food</span></h1>
+            <p>Immerse your senses in crafted flavors made from sustainably sourced local ingredients, hand-poured wines, and culinary passion.</p>
+            <div class="hero-btns">
+                <a href="#menu" class="btn btn-primary">Explore Menu <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#reservation" class="btn btn-secondary">Reserve a Table</a>
+            </div>
+            <div class="hero-features">
+                <div class="feature-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h4>Open Daily</h4>
+                        <p>11:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Prime Location</h4>
+                        <p>452 Culinary Ave, NY</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-award"></i>
+                    <div>
+                        <h4>Master Chefs</h4>
+                        <p>Award Winning Team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="img-box img-1">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800" alt="Restaurant Interior">
+                    </div>
+                    <div class="img-box img-2">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&q=80&w=600" alt="Chef preparing meal">
+                    </div>
+                    <div class="experience-badge">
+                        <span class="number">15+</span>
+                        <span class="text">Years of Culinary Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-subtitle">Our Story</span>
+                    <h2 class="section-title">Where Tradition Meets Modern Gastronomy</h2>
+                    <p class="lead-text">Founded in 2009, Gourmet Haven began with a simple philosophy: honor the ingredient, respect the craft, and delight the guest.</p>
+                    <p>Our executive chefs combine time-honored cooking techniques with avant-garde flavor pairings. Every plate that leaves our kitchen is a testament to our commitment to farm-to-table freshness, sustainability, and uncompromising taste.</p>
+                    
+                    <div class="about-points">
+                        <div class="point">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>100% Organic & Locally Sourced Produce</span>
+                        </div>
+                        <div class="point">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Hand-Crafted Pasta & Artisan Breads Daily</span>
+                        </div>
+                        <div class="point">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Curated Sommelier Wine Selection</span>
+                        </div>
+                    </div>
+
+                    <a href="#menu" class="btn btn-outline">Discover Our Dishes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Taste Perfection</span>
+                <h2 class="section-title">Explore Our Exquisite Menu</h2>
+                <p>Choose from our carefully curated selection of appetizers, mains, artisan pizzas, and decadent desserts.</p>
+            </div>
+
+            <!-- Menu Category Tabs -->
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="all">All Dishes</button>
+                <button class="tab-btn" data-category="starters">Starters</button>
+                <button class="tab-btn" data-category="mains">Main Course</button>
+                <button class="tab-btn" data-category="pizza">Wood-Fired Pizza</button>
+                <button class="tab-btn" data-category="desserts">Desserts</button>
+                <button class="tab-btn" data-category="drinks">Drinks & Wine</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- Items populated by JS or rendered in HTML for SEO -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Chef Specials / Banner Section -->
+    <section id="specials" class="specials section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Limited Time</span>
+                <h2 class="section-title">Chef's Weekly Masterpieces</h2>
+                <p>Hand-crafted creations available only for a limited duration.</p>
+            </div>
+
+            <div class="specials-grid">
+                <div class="special-card">
+                    <div class="special-image">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800" alt="Truffle Wagyu Steak">
+                        <span class="badge-special">Chef's Choice</span>
+                    </div>
+                    <div class="special-content">
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <h3>Truffle Butter Wagyu Ribeye</h3>
+                        <p>Grade A9 Japanese Wagyu served with roasted garlic puree, wild forest mushrooms, and shaved black winter truffle.</p>
+                        <div class="special-footer">
+                            <span class="price">$68.00</span>
+                            <button class="btn btn-sm btn-primary add-to-cart-direct" data-id="spec-1" data-name="Truffle Butter Wagyu Ribeye" data-price="68.00" data-img="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800">
+                                <i class="fa-solid fa-plus"></i> Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="special-card">
+                    <div class="special-image">
+                        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&q=80&w=800" alt="Lobster Thermidor">
+                        <span class="badge-special">Bestseller</span>
+                    </div>
+                    <div class="special-content">
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <h3>Atlantic Lobster Thermidor</h3>
+                        <p>Fresh Maine lobster tail baked in a rich brandy cream sauce, gruyere cheese, and accompanied by herb butter asparagus.</p>
+                        <div class="special-footer">
+                            <span class="price">$52.00</span>
+                            <button class="btn btn-sm btn-primary add-to-cart-direct" data-id="spec-2" data-name="Atlantic Lobster Thermidor" data-price="52.00" data-img="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&q=80&w=800">
+                                <i class="fa-solid fa-plus"></i> Add to Order
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us section-padding bg-dark text-white">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle text-gold">The Haven Experience</span>
+                <h2 class="section-title text-white">Why Food Lovers Choose Us</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="icon-box"><i class="fa-solid fa-seedling"></i></div>
+                    <h3>Farm to Table</h3>
+                    <p>We partner with local organic farmers to bring freshest seasonal harvests straight to your plate.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon-box"><i class="fa-solid fa-fire-burner"></i></div>
+                    <h3>Master Artisans</h3>
+                    <p>Our culinary team brings decades of international experience from Michelin-starred kitchens.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon-box"><i class="fa-solid fa-wine-glass"></i></div>
+                    <h3>Sommelier Curated</h3>
+                    <p>Over 200+ handpicked vintage and modern wines to complement every dish perfectly.</p>
+                </div>
+                <div class="why-item">
+                    <div class="icon-box"><i class="fa-solid fa-face-smile"></i></div>
+                    <h3>Immaculate Vibe</h3>
+                    <p>An enchanting ambient atmosphere designed for romantic dates, family gatherings, and celebrations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation section-padding">
+        <div class="container">
+            <div class="reservation-wrapper">
+                <div class="reservation-info">
+                    <span class="section-subtitle">Book Your Table</span>
+                    <h2>Make a Reservation</h2>
+                    <p>Secure your spot at Gourmet Haven for an unforgettable dining experience. For parties larger than 8, please call us directly.</p>
+                    
+                    <div class="contact-mini">
+                        <div class="cm-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 839-2041</p>
+                            </div>
+                        </div>
+                        <div class="cm-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>reservations@gourmethaven.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reservation-form-container">
+                    <form id="reservation-form">
+                        <div class="form-group">
+                            <label for="res-name"><i class="fa-solid fa-user"></i> Full Name</label>
+                            <input type="text" id="res-name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                                <input type="tel" id="res-phone" placeholder="(555) 000-0000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-guests"><i class="fa-solid fa-users"></i> Guests</label>
+                                <select id="res-guests" required>
+                                    <option value="" disabled selected>Select Guests</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People (Couple)</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5 People</option>
+                                    <option value="6">6 People</option>
+                                    <option value="8+">8+ (Large Party)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="res-date"><i class="fa-solid fa-calendar"></i> Date</label>
+                                <input type="date" id="res-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="res-time"><i class="fa-solid fa-clock"></i> Time</label>
+                                <select id="res-time" required>
+                                    <option value="" disabled selected>Select Time</option>
+                                    <option value="12:00 PM">12:00 PM (Lunch)</option>
+                                    <option value="01:00 PM">01:00 PM (Lunch)</option>
+                                    <option value="05:30 PM">05:30 PM (Dinner)</option>
+                                    <option value="07:00 PM">07:00 PM (Dinner)</option>
+                                    <option value="08:30 PM">08:30 PM (Dinner)</option>
+                                    <option value="09:30 PM">09:30 PM (Late Night)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="res-notes"><i class="fa-solid fa-note-sticky"></i> Special Requests (Optional)</label>
+                            <textarea id="res-notes" rows="3" placeholder="Dietary restrictions, anniversary celebration, seating preference..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Confirm Reservation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Reviews Section -->
+    <section id="reviews" class="reviews section-padding bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Happy Guests</span>
+                <h2 class="section-title">What People Say About Us</h2>
+                <p>Read honest reviews from our cherished patrons and food critics.</p>
+            </div>
+
+            <div class="reviews-slider">
+                <div class="review-card active">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"An absolute masterpiece of a restaurant! The truffle wagyu melted in my mouth, and the wine pairing recommended by the sommelier was spot on. Worth every single star."</p>
+                    <div class="review-author">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Samantha Wright">
+                        <div>
+                            <h4>Samantha Wright</h4>
+                            <span>Food & Travel Blogger</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"We celebrated our 10th wedding anniversary here and the staff went above and beyond. The ambiance is magical, and the lobster thermidor is legendary."</p>
+                    <div class="review-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="Marcus Vance">
+                        <div>
+                            <h4>Marcus Vance</h4>
+                            <span>Local Architect</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Fast delivery when ordering online, and the food arrived piping hot with gorgeous packaging. It tastes just as gourmet at home as it does in the dining room!"</p>
+                    <div class="review-author">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200" alt="Elena Rostova">
+                        <div>
+                            <h4>Elena Rostova</h4>
+                            <span>Regular Patron</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram / Gallery Banner -->
+    <section class="gallery-section">
+        <div class="container-fluid">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&q=80&w=500" alt="Food item">
+                    <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=500" alt="Food item">
+                    <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80&w=500" alt="Food item">
+                    <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&q=80&w=500" alt="Food item">
+                    <div class="gallery-overlay"><i class="fa-brands fa-instagram"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo footer-logo">
+                        <i class="fa-solid fa-utensils"></i>
+                        <span>Gourmet Haven</span>
+                    </a>
+                    <p>Crafting culinary masterpieces and unforgettable dining memories since 2009. Join us for an extraordinary experience.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Our Menu</a></li>
+                        <li><a href="#specials">Chef Specials</a></li>
+                        <li><a href="#reservation">Reservations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Opening Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Mon - Thu:</span> 11:00 AM - 10:00 PM</li>
+                        <li><span>Fri - Sat:</span> 11:00 AM - 11:30 PM</li>
+                        <li><span>Sunday:</span> 10:00 AM - 10:00 PM</li>
+                        <li><span>Brunch:</span> Sat & Sun 10AM - 2PM</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get exclusive recipes, event invites, and special discount codes.</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Gourmet Haven. All Rights Reserved. Designed with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Slide-out Drawer -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> Your Order (<span id="drawer-item-count">0</span>)</h3>
+            <button id="close-cart" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items injected dynamically -->
+            <div class="empty-cart" id="empty-cart">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Your cart is currently empty.</p>
+                <a href="#menu" class="btn btn-sm btn-primary" id="start-shopping-btn">Start Ordering</a>
+            </div>
+        </div>
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal-price">$0.00</span>
+            </div>
+            <div class="cart-discount" id="cart-discount-row" style="display: none;">
+                <span>Discount (HAVEN20):</span>
+                <span id="cart-discount-price">-$0.00</span>
+            </div>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <div class="promo-input-box">
+                <input type="text" id="promo-code-input" placeholder="Promo code (e.g. HAVEN20)">
+                <button type="button" id="apply-promo-btn" class="btn btn-sm btn-outline">Apply</button>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkout-btn"><i class="fa-solid fa-lock"></i> Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Order Success Modal -->
+    <div class="modal" id="order-modal">
+        <div class="modal-content">
+            <div class="modal-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for dining with Gourmet Haven. Your order has been received and our kitchen is already preparing your feast.</p>
+            <div class="order-details-box">
+                <p><strong>Order ID:</strong> <span id="modal-order-id">#GH-98241</span></p>
+                <p><strong>Estimated Delivery/Pickup:</strong> ~35 mins</p>
+            </div>
+            <button class="btn btn-primary" id="close-modal-btn">Back to Website</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

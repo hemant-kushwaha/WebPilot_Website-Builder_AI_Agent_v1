@@ -13,12 +13,13 @@ const model = process.env.MODEL;
 export async function runWebsiteBuilder({
   message,
   previousInteractionId = null,
+  res,
 }) {
   let input = message;
   let interactionId = previousInteractionId;
 
   while (true) {
-    const interaction = await ai.interactions.create({
+    const stream = await ai.interactions.create({
       model,
 
       system_instruction: WEBSITE_SYSTEM_PROMPT,
@@ -28,47 +29,81 @@ export async function runWebsiteBuilder({
       previous_interaction_id: interactionId || undefined,
 
       tools: websiteTools,
+      stream: true,
+      // generation_config: {
+      //   thinking_level: "minimal",
+      // },
     });
 
-    interactionId = interaction.id;
     const functionResults = [];
+    let currentCall = null;
 
-    // Gemini can return one or more function_call steps.
-    for (const step of interaction.steps || []) {
-      // Use IF to Execute Your Step Type
+    for await (const event of stream) {
+      //// Send text immediately to browser
+      if (event.event_type === "step.delta" && event.delta.type === "text") {
+        res.write(event.delta.text);
+      }
 
-      if (step.type !== "function_call") continue;
+      // Get interaction ID
+      if (event.event_type === "interaction.completed") {
+        interactionId = event.interaction.id;
+      }
 
-      let result;
-
-      try {
-        result = await executeTool(step.name, step.arguments);
-      } catch (error) {
-        console.error("Tool execution error:", error);
-
-        result = {
-          error: error.message,
+      // Function call
+      if (
+        event.event_type === "step.start" &&
+        event.step?.type === "function_call"
+      ) {
+        currentCall = {
+          id: event.step.id,
+          name: event.step.name,
+          arguments: "",
         };
       }
 
-      // Function_result
-      functionResults.push({
-        type: "function_result",
-        name: step.name,
-        call_id: step.id,
-        result: [
-          {
-            type: "text",
-            text: typeof result === "string" ? result : JSON.stringify(result),
-          },
-        ],
-      });
+      // Function arguments arrive as deltas
+      if (
+        event.event_type === "step.delta" &&
+        event.delta?.type === "arguments_delta"
+      ) {
+        currentCall.arguments += event.delta.arguments;
+      }
+
+      // Function call finished
+      if (event.event_type === "step.stop" && currentCall) {
+        let result;
+
+        try {
+          const args = JSON.parse(currentCall.arguments); //arguments_delta gives you the arguments as a JSON string.'{"path":"hemant-portfolio"}'
+
+          result = await executeTool(currentCall.name, args);
+        } catch (error) {
+          result = {
+            error: error.message,
+          };
+        }
+
+        functionResults.push({
+          type: "function_result",
+          name: currentCall.name,
+          call_id: currentCall.id,
+          result: [
+            {
+              type: "text",
+              text:
+                typeof result === "string" ? result : JSON.stringify(result),
+            },
+          ],
+        });
+
+        currentCall = null;
+      }
     }
 
-    //No function calls means Gemini has finished the task.
-    if (functionResults.length === 0) return interaction.output_text || "";
+    // Breaking the outer loop
+    if (functionResults.length === 0) return { interactionId };
 
-    //Send all tool results back to Gemini.
+    //Tool was called So outer LOOP continues
     input = functionResults;
   }
 }
